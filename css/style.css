@@ -355,7 +355,7 @@ form .btn-enviar input {
 .footer-section h3 {
   font-size: 1.4rem;
   margin-bottom: 20px;
-  color: #3498db;
+  color: #bdc3c7;
   position: relative;
   padding-bottom: 10px;
 }
@@ -367,7 +367,7 @@ form .btn-enviar input {
   bottom: 0;
   width: 50px;
   height: 3px;
-  background-color: #3498db;
+  background-color: #bdc3c7;
 }
 
 .footer-about p {
@@ -410,7 +410,7 @@ form .btn-enviar input {
 
 .footer-contact i {
   margin-right: 10px;
-  color: #3498db;
+  color: #bdc3c7;
   width: 20px;
 }
 
