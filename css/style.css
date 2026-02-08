@@ -50,8 +50,13 @@ form .btn-enviar input:hover {
 
 /* Estilo de Cabeçalho */
 
-.logo span {
-  color: rgb(88, 88, 207);
+.logo {
+  width: 80px;
+  /* background-color: #00ff08; */
+  margin-left: 30px;
+}
+.logo img {
+  width: 100%;
 }
 
 header {
