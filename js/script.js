@@ -1,24 +1,15 @@
-// Adicionar ano atual automaticamente
-document.addEventListener("DOMContentLoaded", function () {
-  const yearSpan = document.querySelector(".footer-bottom p");
-  const currentYear = new Date().getFullYear();
-  yearSpan.innerHTML = yearSpan.innerHTML.replace("2025", currentYear);
+let btnMenu = document.getElementById('btn-menu');
+let menu = document.getElementById('menu-mobile');
+let overlay = document.getElementById('overlay-menu');
 
-  // Efeito smooth scroll para links internos
-  document.querySelectorAll(".footer-links a").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const href = this.getAttribute("href");
-      if (href.startsWith("#")) {
-        e.preventDefault();
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: "smooth",
-          });
-        }
-      }
-    });
-  });
+btnMenu.addEventListener('click', () => {
+  menu.classList.add('abrir-menu');
+});
+
+menu.addEventListener('click', () => {
+  menu.classList.remove('abrir-menu');
+});
+
+overlay.addEventListener('click', () => {
+  menu.classList.remove('abrir-menu');
 });

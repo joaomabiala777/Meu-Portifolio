@@ -53,7 +53,7 @@ form .btn-enviar input:hover {
 .logo {
   width: 80px;
   /* background-color: #00ff08; */
-  margin-left: 30px;
+  margin-left: 15px;
 }
 .logo img {
   width: 100%;
@@ -76,7 +76,7 @@ header a {
   transition: 0.2s;
 }
 
-header a:hover {
+header nav.menu-desktop a:hover {
   color: #fff;
   transform: scale(1.05);
 }
@@ -85,12 +85,83 @@ header nav ul {
   list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
   display: inline-block;
   padding: 0 40px;
 }
 
-/* ESTILO DO SITE */
+/* ESTILO DO MENU MOBILE */
+.btn-abrir-menu i{
+  color: #00ff08;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.menu-mobile {
+  background-color: #000;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+
+/* ESCONDE MENU HAMBURGUER NO DESKTOP */
+.btn-abrir-menu {
+  display: none;
+}
+
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+  display: block;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+  color: #00ff08;
+  font-size: 30px;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+  transition: 0.2s;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #00ff08;
+  color: #000;
+}
+
+.overlay-menu {
+  background-color: #000000df;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
 section.topo-do-site {
   padding: 40px 4%;
 }
@@ -178,6 +249,8 @@ section.sobre {
 
 section.sobre .img-sobre img {
   border-radius: 20px;
+  width: 300px;
+  height: auto;
 }
 
 section.sobre .flex {
@@ -201,45 +274,26 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre p {
-  margin: 5px 0;
+  margin: 20px 0;
   text-align: justify;
 }
 
-.sobre .txt-sobre .btn-social {
-  display: flex;
-  gap: 10px;
-}
-
-.sobre .txt-sobre .btn-social button {
-  width: 50px;
-  height: 50px;
+.btn-social button {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: none;
   background-color: #00ff08;
   font-size: 30px;
   cursor: pointer;
-  margin-top: 2px;
-  margin-right: 2px;
-  transition: 0.2s;
-}
-
-.sobre .txt-sobre .btn-doc button {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: #00ff08;
-  font-size: 10px;
-  cursor: pointer;
-  margin-top: 2px;
-  margin-right: 2px;
+  margin: 0 5px;
   transition: 0.2s;
 }
 
 /* ESTILO DE PORTIFOLIO */
 section.portifolio {
   padding: 80px 4%;
-  box-shadow: 0 0 40px #ffffff1d;
+  box-shadow: 0 0 40px 10px #ffffff1d;
 }
 
 section.portifolio .flex {
@@ -269,15 +323,12 @@ section.portifolio .flex {
   width: 100%;
   height: 100%;
   border-radius: 40px;
-  /* right: 0; */
-  /* bottom: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-  /* text-align: center; */
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.5s;
@@ -457,7 +508,6 @@ form .btn-enviar input {
   text-decoration: none;
 }
 
-
 /* WHATSAPP */
 .btn-whatsapp {
   padding: 10px 40px;
@@ -481,6 +531,83 @@ form .btn-enviar input {
 }
 
 /* Responsividade */
+@media screen and (max-width: 1020px) {
+  /* CLASSES GERAIS */
+  .flex {
+    flex-direction: column-reverse;
+  }
+  
+  h2.titulo {
+    font-size: 34px;
+    line-height: 30px;
+  }
+
+  /* CABEÇOLHO */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /* MOSTRA MENU HAMBURGUER NO MOBILE */
+  .btn-abrir-menu {
+    display: block;
+  }
+  
+  /* TOPO DO SITE */
+  .section.topo-do-site .flex {
+    gap: 40px;
+  }
+  .section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+
+  /* ESTILO DAS ESPECIALIDADES */
+  section.especialidades {
+    padding: 40px 8%;
+  }
+
+  /* ESTILO SOBRE */
+  section.sobre {
+    padding: 80px 8%;
+  }
+
+  .sobre .txt-sobre h2 {
+    font-size: 34px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .btn-social {
+    display: flex;
+    justify-content: center;
+  }
+  .img-sobre img {
+    width: 100%;
+  }
+
+  /* PORTIFOLIO */
+  section.portifolio {
+    padding: 80px 8%;
+  }
+
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  section.portifolio .flex {
+    gap: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

@@ -6,12 +6,21 @@
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-    <!--FIM GOOGLE FONTS--> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--FIM GOOGLE FONTS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    
+
     <title>Delta | Colde</title>
   </head>
   <body>
@@ -21,7 +30,10 @@
         <!-- Logo -->
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="Delta Code Prestação de Serviços Lda">
+            <img
+              src="img/logo.png"
+              alt="Delta Code Prestação de Serviços Lda"
+            />
           </a>
         </div>
         <!-- / Logo -->
@@ -39,10 +51,30 @@
           <a href="#whatsappForm">
             <button>Contato</button>
           </a>
+        </div><!--/ btn-conatato-->
+
+        <div class="btn-abrir-menu" id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <!--/ btn-conatato-->
-      </div>
-      <!--/ interface-->
+
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="btn-fechar">
+            <i class="fa-solid fa-x"></i>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="#especialidades">Especialidade</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#projectos">Projectos</a></li>
+              <li><a href="#whatsappForm">Contacto</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- menu-mobile -->
+        <div class="overlay-menu" id="overlay-menu"></div>
+      </div><!--/ interface-->
     </header>
 
     <main>
@@ -173,22 +205,7 @@
         <div class="interface">
           <h2 class="titulo">MEU <span>PORTIFÓLIO</span></h2>
           <div class="flex">
-            <a href="https://github.com/joaomabiala777/gestao-stock">
-              <div
-                class="img-port"
-                style="background-image: url(&quot;img/image-1.png&quot;)"
-              >
-                <div class="overlay">Software de Gestão de Stock</div>
-              </div>
-            </a>
-            <a href="https://github.com/joaomabiala777/gestao-cinema">
-              <div
-                class="img-port"
-                style="background-image: url(&quot;img/image-2.png&quot;)"
-              >
-                <div class="overlay">Sistema de Gestão de Cinema</div>
-              </div>
-            </a>
+            
             <a
               href="https://github.com/joaomabiala777/Sistema-de-Gestao-de-Academia"
             >
@@ -199,6 +216,25 @@
                 <div class="overlay">Sistema de Gestão de Academia</div>
               </div>
             </a>
+            
+            <a href="https://github.com/joaomabiala777/gestao-cinema">
+              <div
+                class="img-port"
+                style="background-image: url(&quot;img/image-2.png&quot;)"
+              >
+                <div class="overlay">Sistema de Gestão de Cinema</div>
+              </div>
+            </a>
+            
+            <a href="https://github.com/joaomabiala777/gestao-stock">
+              <div
+                class="img-port"
+                style="background-image: url(&quot;img/image-1.png&quot;)"
+              >
+                <div class="overlay">Software de Gestão de Stock</div>
+              </div>
+            </a>
+            
           </div>
         </div>
         <!-- interface -->
@@ -307,6 +343,6 @@
       </div>
     </footer>
     <script src="js/whatsapp.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
